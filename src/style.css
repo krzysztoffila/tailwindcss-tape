@@ -5,7 +5,7 @@
 /* ROOT */
 :root{
   --clr-primary-200: #F3EED9;
-  --clr-primary-300: #dfb014;
+  --clr-primary-300: #967f35;
   --clr-primary-400: #824936;
 
   --clr-neutral-100: #FFF;
@@ -19,8 +19,19 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+body{
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  font-size: 1.3125rem;
+  line-height: 1.6;
+}
 body,h1,h2,h3,p{
   margin: 0;
+}
+h1,h2,h3{
+  font-family: var(--ff-accent);
+  font-weight: 900;
+  line-height: 1;
 }
 /* HEADER */
 header{
@@ -31,19 +42,27 @@ header{
   display: flex;
   justify-content: center;
   align-items: center;
-  /* TODO: CENTER TEXT IN BLUR DIV */
-  text-align: center;
-  font-family: var(--ff-primary);
 }
 .blur{
   width: 680px;
-  height: 480px;
-  background: rgba(255,255,255,0.5);
-  backdrop-filter: blur(20px);
-  border-radius: 30px;
-  color: var(--clr-primary-300);
-  font-size: 24px;
+  height: 280px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  color: var(--clr-neutral-100);
+  font-size: 36px;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+/* Backgrounds */
+/* .bg-light{
+background-color: var(--clr-primary-200);
+} */
+.bg-primary{
+  background-color: var(--clr-primary-400);
+}
+.bg-dark{
+  background-color: var(--clr-neutral-900);
 }
