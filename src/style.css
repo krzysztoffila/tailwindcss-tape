@@ -1,8 +1,11 @@
+/* IMPORT TAILWIND CSS */
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+/* ROOT */
 :root{
   --clr-primary-200: #F3EED9;
+  --clr-primary-300: #dfb014;
   --clr-primary-400: #824936;
 
   --clr-neutral-100: #FFF;
@@ -18,4 +21,29 @@
 }
 body,h1,h2,h3,p{
   margin: 0;
+}
+/* HEADER */
+header{
+  height: 100vh;
+  background-image: url('/img/christopher-gower-m_HRfLhgABo-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* TODO: CENTER TEXT IN BLUR DIV */
+  text-align: center;
+  font-family: var(--ff-primary);
+}
+.blur{
+  width: 680px;
+  height: 480px;
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: blur(20px);
+  border-radius: 30px;
+  color: var(--clr-primary-300);
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
