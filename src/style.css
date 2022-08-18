@@ -25,13 +25,24 @@ body{
   font-size: 1.3125rem;
   line-height: 1.6;
 }
-body,h1,h2,h3,p{
+.container{
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+}
+body,h1,h2,p{
   margin: 0;
 }
-h1,h2,h3{
+h1,h2{
   font-family: var(--ff-accent);
   font-weight: 900;
   line-height: 1;
+  color: var(--clr-primary-400)
+}
+h2, p{
+  margin-bottom: 1em;
+}
+.text-center{
+  text-align: center;
 }
 /* HEADER */
 header{
@@ -43,9 +54,12 @@ header{
   justify-content: center;
   align-items: center;
 }
+header,section{
+  padding: 3rem 0;
+}
 .blur{
   width: 680px;
-  height: 280px;
+  height: 380px;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   border-radius: 50px;
@@ -56,11 +70,10 @@ header{
   justify-content: center;
   align-items: center;
 }
-/* Section */
-.container{
-  margin-inline: auto;
-  width: min(90%, 70.5rem);
+.blur-text{
+  color: var(--clr-primary-200)
 }
+/* Section */
 section{
   padding: 3rem 0;
 }
@@ -77,4 +90,27 @@ section{
 }
 .bg-primary h2, .bg-dark h2{
   color: var(--clr-primary-200);
+}
+img{
+  display: block;
+  max-width: 100%;
+}
+.split{
+  display: flex;
+  flex-direction: column;
+}
+/* .split > div > h2, p{
+  margin: 0 5rem;
+} */
+/* MEDIA */
+@media (min-width: 40em){
+  .split{
+    flex-direction: row;
+  }
+  .split > *{
+    flex-basis: 100%;
+  }
+  img{
+    min-width: 500px;
+  }
 }
